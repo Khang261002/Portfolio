@@ -18,7 +18,7 @@ const Navbar = () => {
           to="/"
           className='flex items-center gap-2'
           onClick={() => {
-            setActive("");
+            setActive("/Portfolio");
             window.scrollTo(0, 0);
           }}
         >
