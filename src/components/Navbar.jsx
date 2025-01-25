@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
@@ -18,7 +18,7 @@ const Navbar = () => {
           to="/"
           className='flex items-center gap-2'
           onClick={() => {
-            setActive("/Portfolio");
+            setActive("");
             window.scrollTo(0, 0);
           }}
         >
