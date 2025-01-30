@@ -23,8 +23,8 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.45 : 0.65} // Smaller scale for mobile
-        position={isMobile ? [0, -2.7, -0.7] : [0, -2.75, -1]}
+        scale={isMobile ? 0.4 : 0.65} // Smaller scale for mobile
+        position={isMobile ? [0, -2.7, -0.7] : [0, -2.5, -1]}
         rotation={[0.007, -0.3, -0.1]}
       />
     </mesh>
@@ -37,30 +37,30 @@ Computers.propTypes = {
 }
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 768px)').matches)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
 
     setIsMobile(mediaQuery.matches)
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
+      setIsMobile(event.matches)
     }
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    mediaQuery.addEventListener('change', handleMediaQueryChange)
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }
-  }, []);
+  }, [])
 
   return (
     <Canvas
       frameloop="demand"
       shadows
       camera={{
-        position: isMobile ? [10, 3, 5] : [20, 3, 5],
+        position: isMobile ? [20, 3, 5] : [20, 3, 5],
         fov: isMobile ? 35 : 25
       }}
       gl={{ preserveDrawingBuffer: true }}

@@ -4,7 +4,7 @@ import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import {
   Decal,
-  Float,
+  // Float, /* Float is to randomize the rotation and position of the ball */
   OrbitControls,
   Preload,
   useTexture,
@@ -16,11 +16,12 @@ const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl])
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    // <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <>
       <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
+      <directionalLight position={[0, 10, 5]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
+        <icosahedronGeometry args={[1, 4]} />
         <meshStandardMaterial
           color='#fff8eb'
           polygonOffset
@@ -35,7 +36,8 @@ const Ball = (props) => {
           flatShading
         />
       </mesh>
-    </Float>
+    </>
+    // </Float>
   )
 }
 
@@ -51,7 +53,7 @@ const BallCanvas = ({ icon }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} enablePan={false} />
         <Ball imgUrl={icon} />
       </Suspense>
 

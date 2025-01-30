@@ -43,8 +43,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white text-center font-bold text-[24px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-center text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap items-center justify-center gap-2'>
@@ -71,7 +71,7 @@ ProjectCard.propTypes = {
   source_code_link: PropTypes.string.isRequired
 }
 
-const WorksComponent = () => {
+const ProjectComponent = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -82,7 +82,7 @@ const WorksComponent = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] mx-auto max-w-4xl leading-[30px]'
+          className='mt-3 text-center text-secondary text-[17px] mx-auto max-w-4xl leading-[30px]'
         >
           Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with link to code repository and live demo in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
         </motion.p>
@@ -97,6 +97,6 @@ const WorksComponent = () => {
   )
 }
 
-const Works = SectionWrapper(WorksComponent, '')
+const Project = SectionWrapper(ProjectComponent, 'project')
 
-export default Works
+export default Project

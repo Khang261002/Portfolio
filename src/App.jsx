@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { BrowserRouter } from 'react-router-dom';
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Project, StarsCanvas } from './components';
 
 const App = () => {
   const basename = process.env.NODE_ENV === "production" ? "/Portfolio" : "/";
@@ -16,7 +16,7 @@ const App = () => {
         <About />
         <Experience />
         <Tech />
-        <Works />
+        <Project />
         <Feedbacks />
         <div className="relative z-0">
           <Contact />

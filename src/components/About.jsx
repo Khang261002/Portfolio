@@ -51,7 +51,7 @@ const AboutComponent = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary mx-auto text-[17px] max-w-5xl leading-[30px]'
+        className='mt-4 text-center text-secondary mx-auto text-[17px] max-w-5xl leading-[30px]'
       >
         I&apos;m a dedicated and versatile Computer Science graduate with a strong foundation in software development, machine learning, and full-stack web development. Proficient in programming languages like Python, JavaScript, and Java, I have hands-on experience with frameworks such as Flask, Django, and React. I&apos;m a quick learner who enjoys collaborating to create innovative, scalable, and user-friendly solutions that address real-world challenges. With a passion for problem-solving and continuous learning, I am eager to turn ideas into impactful technologies. Let&apos;s work together to bring your ideas to reality!
       </motion.p>

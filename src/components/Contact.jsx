@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
@@ -15,6 +15,26 @@ const ContactComponent = () => {
     message: ''
   })
   const [loading, setLoading] = useState(false)
+  const canvasRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target); // Stop observing after first load
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% is visible
+    );
+
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -53,13 +73,13 @@ const ContactComponent = () => {
   }
 
   return (
-    <div className='xl:flex-row xl:w-full flex-col-reverse flex gap-10 overflow-hidden'>
+    <div ref={canvasRef} className='xl:flex-row xl:w-full flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 text-left rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h2 className={styles.sectionHeadText}>Contact.</h2>
+        <p className={`${styles.sectionSubText} !text-left`}>Get in touch</p>
+        <h2 className={`${styles.sectionHeadText} !text-left`}>Contact.</h2>
 
         <form
           ref={formRef}
@@ -113,7 +133,7 @@ const ContactComponent = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] md:w-[550px] h-[350px] w-[350px] mx-auto'
       >
-        <EarthCanvas />
+        {isVisible && <EarthCanvas />}
       </motion.div>
     </div>
   )
