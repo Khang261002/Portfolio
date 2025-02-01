@@ -73,7 +73,7 @@ const ContactComponent = () => {
   }
 
   return (
-    <div ref={canvasRef} className='xl:flex-row xl:w-full flex-col-reverse flex gap-10 overflow-hidden'>
+    <div ref={canvasRef} className='xl:flex-row w-full flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 text-left rounded-2xl'
@@ -131,7 +131,7 @@ const ContactComponent = () => {
       
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] md:w-[550px] h-[350px] w-[350px] mx-auto'
+        className='xl:flex-1 xl:h-auto md:h-[550px] md:w-[550px] sm:w-[450px] sm:h-[450px] h-[260px] w-[260px] mx-auto'
       >
         {isVisible && <EarthCanvas />}
       </motion.div>

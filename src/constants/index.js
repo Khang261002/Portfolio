@@ -1,29 +1,35 @@
 import {
+  // Services
+  web,
   software,
   datasci,
   ml,
-  web,
+  // Technologies
   python,
   cpp,
-  javascript,
+  java,
   html,
   css,
+  javascript,
   reactjs,
+  threejs,
   tailwind,
   django,
   flask,
   sklearn,
-  mysql,
+  sql,
   mongodb,
+  mysql,
   git,
   docker,
-  vgf,
+  // Works
   netapp,
   d_academy,
+  vgf,
+  // Projects
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -78,6 +84,10 @@ const technologies = [
     icon: cpp,
   },
   {
+    name: "Java",
+    icon: java,
+  },
+  {
     name: "HTML",
     icon: html,
   },
@@ -90,8 +100,16 @@ const technologies = [
     icon: javascript,
   },
   {
+    name: "SQL",
+    icon: sql,
+  },
+  {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
   },
   {
     name: "Tailwind CSS",
@@ -116,10 +134,6 @@ const technologies = [
   {
     name: "MySQL",
     icon: mysql,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "Git",
