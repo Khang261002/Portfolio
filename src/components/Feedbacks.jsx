@@ -66,6 +66,6 @@ const FeedbacksComponent = () => {
   )
 }
 
-const Feedbacks = SectionWrapper(FeedbacksComponent, '')
+const Feedbacks = SectionWrapper(FeedbacksComponent, 'feedback')
 
 export default Feedbacks

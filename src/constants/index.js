@@ -27,9 +27,11 @@ import {
   d_academy,
   vgf,
   // Projects
-  carrent,
-  jobit,
-  tripguide,
+  frs,
+  digit,
+  snake,
+  ascii,
+  flappybird,
 } from "../assets";
 
 export const navLinks = [
@@ -48,6 +50,10 @@ export const navLinks = [
   {
     id: "project",
     title: "Project",
+  },
+  {
+    id: "feedback",
+    title: "Testimonials",
   },
   {
     id: "contact",
@@ -190,95 +196,148 @@ const experiences = [
 ];
 
 const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
+  // {
+  //   testimonial:
+  //     "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+  //   name: "Sara Lee",
+  //   designation: "CFO",
+  //   company: "Acme Co",
+  //   image: "https://randomuser.me/api/portraits/women/4.jpg",
+  // },
+  // {
+  //   testimonial:
+  //     "I've never met a web developer who truly cares about their clients' success like Rick does.",
+  //   name: "Chris Brown",
+  //   designation: "COO",
+  //   company: "DEF Corp",
+  //   image: "https://randomuser.me/api/portraits/men/5.jpg",
+  // },
+  // {
+  //   testimonial:
+  //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+  //   name: "Lisa Wang",
+  //   designation: "CTO",
+  //   company: "456 Enterprises",
+  //   image: "https://randomuser.me/api/portraits/women/6.jpg",
+  // },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Face Recognition Systems Web Interface",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A web platform for user registration and check-in via facial recognition. Built with React, Tailwind CSS, and AI/ML for real-time detection and authentication.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "ai-ml",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: frs,
+    source_code_link: "https://github.com/user101623/FRS-Production",
+    web_url: ""
   },
   {
-    name: "Trip Guide",
+    name: "Handwritten Digit Recognition",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A robust handwritten digit recognition tool using four neural networks, built with Python, scikit-learn, and Theano. Features a user-friendly interface for seamless input, testing, and future adaptability.",
     tags: [
       {
-        name: "nextjs",
+        name: "ai-ml",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "neural-network",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "theano",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "svm",
+        color: "bg-gradient-to-r from-yellow-400 to-yellow-500 inline-block text-transparent bg-clip-text",
+      },
+    ],
+    image: digit,
+    source_code_link: "https://github.com/Khang261002/My-Projects/tree/main/DigitRecognition",
+    web_url: "",
+  },
+  {
+    name: "Basic Snake Game",
+    description:
+      "A classic Snake game built with JavaScript and HTML5 Canvas, featuring smooth controls, increasing speed, and self-collision detection. Includes a real-time score, highest score tracking, and a replay option for endless fun.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "game",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: snake,
+    source_code_link: "https://github.com/Khang261002/My-Projects/tree/main/Games/jscode_snake",
+    web_url: "https://khangduong.w3spaces.com/",
+  },
+  {
+    name: "File Converter to ASCII Art",
+    description: "A Python-based tool that converts images and videos into ASCII art while preserving color and audio for videos. Uses OpenCV and PIL for efficient processing.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "opencv",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ascii-art",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "file-conversion",
+        color: "bg-gradient-to-r from-yellow-400 to-yellow-500 inline-block text-transparent bg-clip-text",
+      },
+    ],
+    image: ascii,
+    source_code_link: "https://github.com/Khang261002/My-Projects/tree/main/FileToASCII",
+    web_url: "",
+  },
+  {
+    name: "Flappy Bird Game",
+    description: "A classic Flappy Bird clone built with Pygame, featuring smooth physics-based movement, randomized pipe generation, and a scoring system with high-score tracking. Provides an engaging gameplay experience with simple controls and dynamic difficulty.",
+    tags: [
+      {
+        name: "pygame",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "game-development",
+        color: "green-text-gradient",
+      },
+      {
+        name: "2d-game",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: flappybird,
+    source_code_link: "https://github.com/Khang261002/My-Projects/tree/main/Games/Flappy%20Bird",
+    web_url: "",
   },
 ];
 

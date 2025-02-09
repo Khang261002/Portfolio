@@ -8,7 +8,7 @@ import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, web_url }) => {
   return (
     <Tilt
       tiltMaxAngleX={10}
@@ -22,16 +22,27 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         className='bg-tertiary p-5 rounded-2xl'
       >
         <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt={name}
-            className='w-full h-full object-cover rounded-2xl'
-          />
+          {web_url ? (
+            <a href={web_url} target="_blank" rel="noopener noreferrer" title="Website">
+              <img
+                src={image}
+                alt={name}
+                className='w-full h-full object-cover rounded-2xl'
+              />
+            </a>
+          ) : (
+            <img
+              src={image}
+              alt={name}
+              className='w-full h-full object-cover rounded-2xl'
+            />
+          )}
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute top-3 right-3 w-10 h-10 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, '_blank')}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              title="GitHub Link"
               >
               <img
                 src={github}
@@ -68,7 +79,8 @@ ProjectCard.propTypes = {
     color: PropTypes.string.isRequired
   })),
   image: PropTypes.string.isRequired,
-  source_code_link: PropTypes.string.isRequired
+  source_code_link: PropTypes.string.isRequired,
+  web_url: PropTypes.string,
 }
 
 const ProjectComponent = () => {

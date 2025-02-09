@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo/logo_enhanced-removebg-photoaidcom-cropped.png";
 import close from "./close.svg";
 
 import datasci from "./datasci.png";
@@ -30,9 +30,11 @@ import d_academy from "./company/d_academy.png";
 import netapp from "./company/netapp.png";
 import vgf from "./company/vgf.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import ascii from "./ascii.png";
+import digit from "./digit.png";
+import flappybird from "./flappybird.png";
+import frs from "./frs.png";
+import snake from "./snake.png";
 
 export {
   logo,
@@ -63,7 +65,9 @@ export {
   d_academy,
   netapp,
   vgf,
-  carrent,
-  jobit,
-  tripguide,
+  ascii,
+  digit,
+  flappybird,
+  frs,
+  snake,
 };
