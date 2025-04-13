@@ -196,14 +196,14 @@ const experiences = [
 ];
 
 const testimonials = [
-  // {
-  //   testimonial:
-  //     "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-  //   name: "Sara Lee",
-  //   designation: "CFO",
-  //   company: "Acme Co",
-  //   image: "https://randomuser.me/api/portraits/women/4.jpg",
-  // },
+  {
+    testimonial:
+      "Khang has been a tremendous asset to our team and has helped us improving our Python script and analyzing performance data with his amazing tools. Khang's dedication, enthusiasm and commitment to doing great work shine through in everything he does. He always goes the extra mile to ensure our projects succeed and has shown himself to be a dependable, hardworking and team player. It's been a privilege to collaborate with him and I wholeheartedly recommend Khang for any future opportunities.",
+    name: "Philip Quang",
+    designation: "Performance Engineer",
+    company: "NetApp, Inc.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHCTOFXge5Dow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683066757311?e=1750291200&v=beta&t=U6vTZbsGdT8isUBgm6h6O8SuWhNL_ZmrWjLshIAg268",
+  },
   // {
   //   testimonial:
   //     "I've never met a web developer who truly cares about their clients' success like Rick does.",

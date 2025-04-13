@@ -10,14 +10,16 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
   return (
     <motion.div
       variants={fadeIn('', '', 0.5 * index, 0.75)}
-      className='bg-black-200 p-10 rounded-3xl text-left xs:w-[320px] w-full'
+      className='bg-black-200 p-10 rounded-3xl text-left xs:w-[490px] w-full'
     >
-      <p className='text-white flex font-black text-[48px]'>&quot;</p>
+      <div className='relative h-full min-h-[250px] pb-16'>
+        <p className='text-white flex font-black text-[48px]'>&quot;</p>
 
-      <div className='mt-1'>
-        <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
+        <div className='mt-1 max-h-[106px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent'>
+          <p className='text-white tracking-wider text-[14px]'>{testimonial}</p>
+        </div>
 
-        <div className='mt-7 flex justify-between items-center gap-1'>
+        <div className='absolute bottom-0 left-0 right-0 flex justify-between items-center gap-1'>
           <div className='flex-1 flex flex-col'>
             <p className='text-white font-medium text-[16px]'>
               <span className='blue-text-gradient'>@</span> {name}
